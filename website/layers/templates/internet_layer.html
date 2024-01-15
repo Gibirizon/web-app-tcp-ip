@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('layers.static', filename='./css/layers_style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('layers.static', filename='./css/internet_style.css' ) }}">
+<script src="{{ url_for('layers.static', filename='./js/function.js')}}"></script>
+{% endblock %}
+{% block title %}Warstwa internetowa{% endblock %}
+{% block content %}
+<main class="main">
+    <div class="main__img">
+        <div class="main__text">
+
+            <div class="text__layer">
+                <h1 class="layer__h1">warstwa internetowa</h1>
+                <p class="layer__p">Głównym zadaniem tej warstwy jest odnalezienie najkrótszej i najszybszej drogi
+                    do
+                    urządzenia docelowego przez rozległą sieć. Wśród funkcji tej warstwy można wyróżnić:
+                    adresowanie danych z wykorzystaniem adresów IP, enkapsulację danych - dodanie informacji
+                    nagłówka
+                    IP, ruting - dobór najlepszej trasy dla pakietu oraz dekapsulację - sprawdzenie i usunięcię
+                    nagłówka
+                    IP, kiedy pakiet dotrze do celu.</p>
+            </div>
+
+            <form method="POST" class="form">
+                <button onclick="display_app_layer(this)" name="prot" value="ipv4" type="button"
+                    class="button ipv4 ttn">IPv4</button>
+                <button onclick="display_app_layer(this)" name="prot" value="ipv6" type="button"
+                    class="button ipv6 ttn">IPv6</button>
+                <button onclick="display_app_layer(this)" name="prot" value="nat" type="button"
+                    class="button nat">nat</button>
+                <button onclick="display_app_layer(this)" name="prot" value="icmpv4" type="button"
+                    class="button icmpv4 ttn">ICMPv4</button>
+                <button onclick="display_app_layer(this)" name="prot" value="icmpv6" type="button"
+                    class="button icmpv6 ttn">ICMPv6</button>
+                <button onclick="display_app_layer(this)" name="prot" value="icmpv6nd" type="button"
+                    class="button icmpv6nd ttn">ICMPv6 ND</button>
+                <button onclick="display_app_layer(this)" name="prot" value="ospf" type="button"
+                    class="button ospf">ospf</button>
+                <button onclick="display_app_layer(this)" name="prot" value="eigrp" type="button"
+                    class="button eigrp">eigrp</button>
+                <button onclick="display_app_layer(this)" name="prot" value="bgp" type="button"
+                    class="button bgp">bgp</button>
+            </form>
+
+
+
+        </div>
+        <div id="desc" class="alert description">
+        </div>
+    </div>
+
+</main>
+{% endblock%}

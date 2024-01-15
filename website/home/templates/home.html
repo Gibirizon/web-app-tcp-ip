@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('view.static', filename='./css/home_style.css' ) }}">
+{% endblock %}
+{% block title %}Home page{% endblock %}
+{% block content%}
+<header>
+    <div class="header__img">
+        <div class="header__bg"></div>
+        <div class="header__text">
+            <h1 class="header__h1">TCP/IP</h1>
+            <p class="header__p">Poznaj model protokółów komunikacyjnych</p>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <section class="main__section">
+        <div class="section__div">
+            <h2 class="section__text section__text--h2"><i class="bi bi-plus-circle-fill section__icon"></i>Zrozum
+                mechanimy
+                komunikacji w
+                sieci</h2>
+            <p class="section__text">Chcesz lepiej zrozumieć, jak działa świat online? Odkryj tajniki komunikacji
+                sieciowej i zdobyj wiedzę, która otworzy przed Tobą nowe horyzonty. Zapraszam do zapoznania się z moją
+                stroną internetową, na której w prosty sposób zrozumiesz mechanizmy komunikacji w sieci dzięki
+                szczegółowym
+                analizom modelu TCP/IP!</p>
+        </div>
+        <img src="/home/static/img/komunikacja_1280.jpg" alt="komunikacja w sieci" class="section__img">
+    </section>
+    <section class="main__section">
+        <div class="section__div section__div--right">
+            <h2 class="section__text section__text--h2"><i class="bi bi-plus-circle-fill section__icon"></i>Sprawdź
+                nabytą
+                wiedzę - rozpocznij quiz</h2>
+            <p class="section__text">Po zapoznaniu się z mechanizmami komunikacji w sieci sprawdź swoją wiedzę,
+                rozpoczynając quiz. Aby jednak przystąpić do quizu, musisz najpierw się zalogować.</p>
+            <p class="section__text"><a href="{{ url_for('auth.sign_up') }}" class="section__link">Zarejestruj się</a>
+            </p>
+        </div>
+        <img src="/home/static/img/quiz_time.png" alt="czas na quiz" class="section__img section__img--left">
+    </section>
+    <section class="main__section">
+        <div class="section__div">
+            <h2 class="section__text section__text--h2"><i class="bi bi-plus-circle-fill section__icon"></i>Dodaj własne
+                pytania</h2>
+            <p class="section__text">Aby poszerzyć swoją wiedzę możesz dodać do quizu własne pytania z zagadnieniami,
+                które trudno ci zapamiętać. Jeśli już uda ci się zapoznać z danym zagadnieniem możesz zawsze usunąć
+                pytanie. Funkcja ta również wymaga logowania.
+            </p>
+            <p class="section__text"><a href="{{ url_for('auth.sign_up') }}" class="section__link">Zarejestruj się</a>
+            </p>
+        </div>
+        <img src="/home/static/img/add_question.png" alt="dodaj pytanie" class="section__img section__img--circle">
+
+
+
+
+    </section>
+</main>
+{% endblock %}

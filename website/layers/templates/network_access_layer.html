@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('layers.static', filename='./css/layers_style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('layers.static', filename='./css/transport_style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('layers.static', filename='./css/network_access_style.css' ) }}">
+<script src="{{ url_for('layers.static', filename='./js/function.js')}}"></script>
+{% endblock %}
+{% block title %}Warstwa dostępu do sieci{% endblock %}
+{% block content %}
+<main class="main">
+    <div class="main__img">
+        <div class="main__text">
+
+            <div class="text__layer">
+                <h1 class="layer__h1">warstwa dostępu do sieci</h1>
+                <p class="layer__p">Warstwa dostęu do sieci dba o zapewnienie warstwom górnym dostępu do medium
+                    transmisyjnego. Poza tym odpowiada ona za odebranie pakietów z warstwy internetowej oraz
+                    opatrywanie
+                    tych pakietów kolejnymi informacjami sterującymi. Warstwa dostępu do sieci dodaje adresy
+                    fizyczne
+                    urządzeń - 48-bitowe adresy MAC. Wówczas pakiety stają się ramkami i
+                    to właśnie te ramki trafiają dopiero do medium w celu ich dalszego przesłania do hosta
+                    docelowego.
+                </p>
+            </div>
+
+            <form method="POST" class="form">
+                <button onclick="display_app_layer(this)" name="prot" value="arp" type="button"
+                    class="button arp">arp</button>
+                <button onclick="display_app_layer(this)" name="prot" value="ethernet" type="button"
+                    class="button ethernet">ethernet</button>
+                <button onclick="display_app_layer(this)" name="prot" value="wlan" type="button"
+                    class="button wlan">wlan</button>
+            </form>
+
+
+
+        </div>
+        <div id="desc" class="alert description">
+        </div>
+    </div>
+
+</main>
+{% endblock%}

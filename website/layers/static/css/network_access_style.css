@@ -1,0 +1,21 @@
+.main__img {
+	background-image: url("../img/winter.jpg");
+}
+
+.ethernet {
+	top: 30%;
+	left: 25%;
+	background-image: url("../img/sign.png");
+}
+
+.wlan {
+	top: 30%;
+	left: 75%;
+	background-image: url("../img/sign.png");
+}
+
+.arp {
+	top: 75%;
+	left: 50%;
+	background-image: url("../img/sign.png");
+}

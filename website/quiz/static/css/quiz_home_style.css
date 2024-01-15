@@ -1,0 +1,47 @@
+body {
+	background-color: #7ee8fa;
+	background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+}
+
+.content {
+	position: relative;
+	height: 100vh;
+}
+
+.main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+	text-align: center;
+	width: 70%;
+}
+
+.main__h1 {
+	text-transform: uppercase;
+	font-family: "Lumanosimo", cursive;
+}
+.main__p {
+	margin: 60px 0;
+}
+.btn {
+	display: inline-block;
+	margin: 20px;
+}
+
+@media (min-width: 1200px) {
+	.main {
+		width: 50%;
+	}
+	.main__h1 {
+		font-size: 64px;
+	}
+	.main__p {
+		font-size: 21px;
+	}
+	.btn {
+		margin: 30px;
+		font-size: 28px;
+	}
+}

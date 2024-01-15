@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('auth.static', filename='./css/auth_style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('quiz.static', filename='./css/quiz_add_style.css' ) }}">
+<script src="{{ url_for('quiz.static', filename='./js/delete_question.js')}}"></script>
+{% endblock %}
+{% block title %}Dodaj pytanie do quizu{% endblock %}
+{% block content%}
+<main class="main">
+    <h1 class="main__text main__h1">Dodaj swoje własne pytania do quizu</h1>
+    {% for question in session["current_user_questions"][5:] %}
+    <ul class="list-group list__group alert" id="list">
+
+
+        <h2 class="list__h2">Pytanie {{ loop.index }}</h2>
+        <li class="list-group-item list__item"><span class="list__bold">Treść pytania:</span> {{ question.question }}
+        </li>
+        <li class="list-group-item list__item"><span class="list__bold">Odpowiedź 1:</span> {{ question.answers.answer1
+            }}</li>
+        <li class="list-group-item list__item"><span class="list__bold">Odpowiedź 2:</span> {{ question.answers.answer2
+            }}</li>
+        <li class="list-group-item list__item"><span class="list__bold">Odpowiedź 3:</span> {{ question.answers.answer3
+            }}</li>
+        <li class="list-group-item list__item"><span class="list__bold">Odpowiedź 4:</span> {{ question.answers.answer4
+            }}</li>
+        <button type="button" class="btn-close btn__close" data-bs-dismiss="alert" aria-label="Close"
+            onclick="delete_question('{{ question.question }}')"></button>
+
+    </ul>
+    {% endfor %}
+    <form method="post" class="form">
+        <div class="mb-3">
+            <label for="question" class="form-label form__label">Treść pytania</label>
+            <input placeholder="Wprowadź pytanie" name="question" class="form-control form__input" id="question"
+                type="text">
+        </div>
+        <div class="mb-3">
+            <label for="answer1" class="form-label form__label">Odpowiedź 1</label>
+            <input type="text" placeholder="Wprowadź odpowiedź 1" name="answer1" class="form-control form__input"
+                id="answer1">
+        </div>
+        <div class="mb-3">
+            <label for="answer2" class="form-label form__label">Odpowiedź 2</label>
+            <input type="text" class="form-control form__input" placeholder="Wprowadź odpowiedź 2" name="answer2"
+                id="answer2">
+        </div>
+        <div class="mb-3">
+            <label for="answer3" class="form-label form__label">Odpowiedź 3</label>
+            <input type="text" class="form-control form__input" placeholder="Wprowadź odpowiedź 3" name="answer3"
+                id="answer3">
+        </div>
+        <div class="mb-3">
+            <label for="answer4" class="form-label form__label">Odpowiedź 4</label>
+            <input type="text" class="form-control form__input" placeholder="Wprowadź odpowiedź 4" name="answer4"
+                id="answer4">
+        </div>
+        <div class="mb-3">
+            <label for="correct_answer" class="form-label form__label">Poprawna odpowiedź</label>
+            <input type="text" class="form-control form__input" placeholder="Wprowadź pełną treść poprawnej odpowiedzi"
+                name="correct_answer" id="correct_answer">
+        </div>
+
+        <button type="submit" class="btn btn-primary form__button">Dodaj nowe pytanie</button>
+</main>
+{% endblock %}

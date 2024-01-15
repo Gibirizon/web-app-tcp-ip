@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('quiz.static', filename='./css/quiz_home_style.css' ) }}">
+{% endblock %}
+{% block title%}Wynik quizu{% endblock %}
+{% block content %}
+<main class="main">
+    <h1 class="main__h1">{{ user.login }}, twój wynik to {{ session["correct_answers"] }}/{{
+        session["question_amount"]
+        }} </h1>
+    {% if session["correct_answers"]/session["question_amount"] < 0.51 %} <p class="main__p">
+        Następnym razem pójdzie ci lepiej, a teraz spróbuj powtórzyć swoją wiedzę.</p>
+        <form method="post">
+            <button type="submit" name="link" value="wiedza" class="btn btn-primary">Warstwy modelu TCP/IP</button>
+        </form>
+
+        {% else %}
+        <p class="main__p">
+            Dobra robota! Dodaj do quizu własne pytania by poszerzyć swoją wiedzę.</p>
+        <form method="post">
+            <button type="submit" name="link" value="dodaj-do-quizu" class="btn btn-primary">Dodaj własne pytanie do
+                quizu</button>
+        </form>
+        {% endif %}
+
+</main>
+{% endblock %}
+<p>Twój wynik to </p>
+<p>Good job!</p>

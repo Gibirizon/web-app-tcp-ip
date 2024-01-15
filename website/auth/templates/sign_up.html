@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('auth.static', filename='./css/auth_style.css' ) }}">
+{% endblock %}
+{% block title %}Tworzenie nowego konta{% endblock%}
+{% block content %}
+<main>
+    <h1 class="main__text main__h1">Utwórz nowe konto</h1>
+    <p class="main__text main__p">Masz już konto?<a href="{{ url_for('auth.login')}}" class="main__link">Zaloguj się</a>
+    </p>
+    <form method="post" class="form">
+        <div class="mb-3">
+            <label for="login" class="form__label form-label">Nazwa użytkownika</label>
+            <input type="text" placeholder="Wprowadź nazwę użytkownika" class="form-control form__input" name="login"
+                id="login">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label form__label">E-mail</label>
+            <input type="email" placeholder="Wprowadź adres e-mail" name="email" class="form-control form__input"
+                id="email">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label form__label">Hasło</label>
+            <input type="password" placeholder="Wprowadź hasło" name="password" class="form-control form__input"
+                id="password">
+        </div>
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label form__label">Potwierdzenie hasła</label>
+            <input type="password" class="form-control form__input" placeholder="Potwierdź hasło"
+                name="confirm_password" id="confirm_password">
+        </div>
+
+        <button type="submit" class="btn btn-primary form__button">Zarejestruj się</button>
+
+    </form>
+</main>
+{% endblock %}

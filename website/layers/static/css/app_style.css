@@ -1,0 +1,72 @@
+.main__img {
+	background-image: url("../img/hamburg.jpg");
+}
+
+.dns {
+	top: 10%;
+	left: 15%;
+	background-image: url("../img/sign_left.png");
+}
+
+.dhcpv4 {
+	top: 25%;
+	left: 22%;
+	background-image: url("../img/sign.png");
+}
+
+.dhcpv6 {
+	top: 55%;
+	left: 20%;
+	background-image: url("../img/sign_right.png");
+}
+
+.slaac {
+	top: 75%;
+	left: 18%;
+	background-image: url("../img/sign.png");
+}
+.smtp {
+	top: 0;
+	left: 48%;
+	background-image: url("../img/sign_left.png");
+}
+.pop3 {
+	top: 17.5%;
+	left: 44%;
+	background-image: url("../img/sign_left.png");
+}
+.imap {
+	top: 47.5%;
+	left: 46%;
+	background-image: url("../img/sign_right.png");
+}
+.ftp {
+	top: 40%;
+	left: 68%;
+	background-image: url("../img/sign.png");
+}
+.sftp {
+	top: 65%;
+	left: 66%;
+	background-image: url("../img/sign_left.png");
+}
+.tftp {
+	top: 90%;
+	left: 64%;
+	background-image: url("../img/sign_right.png");
+}
+.http {
+	top: 6%;
+	left: 81%;
+	background-image: url("../img/sign_left.png");
+}
+.https {
+	top: 26%;
+	left: 80%;
+	background-image: url("../img/sign_right.png");
+}
+.rest {
+	top: 52%;
+	left: 81%;
+	background-image: url("../img/sign.png");
+}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('quiz.static', filename='./css/quiz_home_style.css' ) }}">
+{% endblock %}
+{% block title%}Quiz{% endblock %}
+{% block content %}
+<main class="main">
+    <h1 class="main__h1">{{ user.login }}, witamy w trybie quiz</h1>
+    <p class="main__p">Wybierz jedną z opcji - przejdź do rozwiązywania quizu od razu albo najpierw dodaj do niego
+        własne
+        dodatkowe
+        pytania sprawdzające twoją wiedzę na temat modelu TCP/IP.</p>
+    <form method="post">
+        <button type="submit" name="link" value="rozpocznij-quiz" class="btn btn-primary">Rozpocznij quiz</button>
+        <button type="submit" name="link" value="dodaj-do-quizu" class="btn btn-primary">Dodaj własne pytania do
+            quizu</button>
+    </form>
+</main>
+{% endblock %}

@@ -1,0 +1,33 @@
+.main__img {
+	background-image: url("../img/firework.jpg");
+}
+
+.tcp {
+	top: 50%;
+	left: 25%;
+	background-image: url("../img/sign.png");
+}
+
+.udp {
+	top: 50%;
+	left: 75%;
+	background-image: url("../img/sign.png");
+}
+
+@media (min-width: 1200px) {
+	.button {
+		width: 400px;
+		font-size: 48px;
+	}
+
+	.description p {
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.button {
+		width: 600px;
+		font-size: 64px;
+	}
+}

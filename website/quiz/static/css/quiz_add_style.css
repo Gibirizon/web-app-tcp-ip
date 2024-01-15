@@ -1,0 +1,30 @@
+/* .list_i */
+
+.list__group {
+	position: relative;
+	width: 80%;
+	margin: 30px auto;
+}
+
+.list__item {
+	background-color: #d3d3d3;
+	border: none;
+	border-bottom: 2px solid royalblue;
+}
+
+.list__h2 {
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.list__bold {
+	font-weight: bold;
+	font-style: italic;
+	margin-right: 10px;
+}
+
+.btn__close {
+	position: absolute;
+	right: 5%;
+	top: 5%;
+}

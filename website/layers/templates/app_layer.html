@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block link %}
+<link rel="stylesheet" href="{{  url_for('static', filename='./css/style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('layers.static', filename='./css/layers_style.css' ) }}">
+<link rel="stylesheet" href="{{  url_for('layers.static', filename='./css/app_style.css' ) }}">
+<script src="{{ url_for('layers.static', filename='./js/function.js')}}"></script>
+{% endblock %}
+{% block title %}Warstwa aplikacji {% endblock %}
+{% block content %}
+<main class="main">
+    <div class="main__img">
+        <div class="main__text">
+
+            <div class="text__layer">
+                <h1 class="layer__h1">warstwa aplikacji</h1>
+                <p class="layer__p">Warstwa aplikacji udostępnia użytkownikom możliwość korzystania z usług
+                    sieciowych,
+                    takich jak WWW, poczta elektroniczna, wymiana plików, połączenia terminalowe czy komunikatory.
+                    Jest
+                    to warstwa najbliższa użytkownikowi. Zapewnia ona interfejs pomiędzy aplikacjami, których
+                    używamy do komunikacji, a siecią poprzez którą nasze komunikaty są transmitowane. Protokoły
+                    warstwy aplikacji są używane do wymiany danych pomiędzy programami uruchomionymi na hoście
+                    źródłowym i hoście docelowym.</p>
+            </div>
+
+            <form method="POST" class="form">
+                <button onclick="display_app_layer(this)" name="prot" value="dns" type="button"
+                    class="button dns">dns</button>
+                <button onclick="display_app_layer(this)" name="prot" value="dhcpv4" type="button"
+                    class="button dhcpv4 ttn">DHCPv4</button>
+                <button onclick="display_app_layer(this)" name="prot" value="dhcpv6" type="button"
+                    class="button dhcpv6 ttn">DHCPv6</button>
+                <button onclick="display_app_layer(this)" name="prot" value="slaac" type="button"
+                    class="button slaac">slaac</button>
+                <button onclick="display_app_layer(this)" name="prot" value="smtp" type="button"
+                    class="button smtp">smtp</button>
+                <button onclick="display_app_layer(this)" name="prot" value="pop3" type="button"
+                    class="button pop3">pop3</button>
+                <button onclick="display_app_layer(this)" name="prot" value="imap" type="button"
+                    class="button imap">imap</button>
+                <button onclick="display_app_layer(this)" name="prot" value="ftp" type="button"
+                    class="button ftp">ftp</button>
+                <button onclick="display_app_layer(this)" name="prot" value="sftp" type="button"
+                    class="button sftp">sftp</button>
+                <button onclick="display_app_layer(this)" name="prot" value="tftp" type="button"
+                    class="button tftp">tftp</button>
+                <button onclick="display_app_layer(this)" name="prot" value="http" type="button"
+                    class="button http">http</button>
+                <button onclick="display_app_layer(this)" name="prot" value="https" type="button"
+                    class="button https">https</button>
+                <button onclick="display_app_layer(this)" name="prot" value="rest" type="button"
+                    class="button rest">rest</button>
+            </form>
+
+
+
+
+        </div>
+        <div id="desc" class="alert description">
+
+        </div>
+    </div>
+
+</main>
+{% endblock%}

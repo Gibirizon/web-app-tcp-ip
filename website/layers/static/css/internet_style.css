@@ -1,0 +1,51 @@
+.main__img {
+	background-image: url("../img/bern.jpg");
+}
+
+.ipv4 {
+	top: 15%;
+	left: 14%;
+	background-image: url("../img/sign.png");
+}
+
+.ipv6 {
+	top: 50%;
+	left: 20%;
+	background-image: url("../img/sign_right.png");
+}
+
+.nat {
+	top: 80%;
+	left: 18%;
+	background-image: url("../img/sign.png");
+}
+.icmpv4 {
+	top: 35%;
+	left: 48%;
+	background-image: url("../img/sign_left.png");
+}
+.icmpv6 {
+	top: 65%;
+	left: 58%;
+	background-image: url("../img/sign_left.png");
+}
+.icmpv6nd {
+	top: 90%;
+	left: 52%;
+	background-image: url("../img/sign_right.png");
+}
+.ospf {
+	top: 0%;
+	left: 81%;
+	background-image: url("../img/sign.png");
+}
+.eigrp {
+	top: 42.5%;
+	left: 80%;
+	background-image: url("../img/sign_left.png");
+}
+.bgp {
+	top: 72.5%;
+	left: 81%;
+	background-image: url("../img/sign_right.png");
+}
